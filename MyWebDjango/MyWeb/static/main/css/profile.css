@@ -1,0 +1,136 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #151515;
+    color: white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: black !important;
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
+    color: white;
+    background-color: #5d5d5d;
+    border: 2px solid #777;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 10px 0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus {
+    border-color: #00bcd4;
+    background-color: #3a3a3a;
+}
+
+/* Остальной CSS остается прежним */
+
+.content-block {
+    margin: 50px 10%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    min-height: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile-photo {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+
+.file-input {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-fields {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-error {
+    color: red;
+    font-size: 14px;
+}
+
+button {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f2f4f5;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.btn-logout {
+    background-color: #f44336;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    margin-top: 5px;
+}
+
+.btn-logout:hover {
+    background-color: #d32f2f;
+}
+
+.form-group p {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}

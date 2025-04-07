@@ -1,0 +1,140 @@
+body {
+    font-family: 'comic sans ms', cursive;
+    background-color: #151515;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black !important;
+    background-color: #ffffff;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    color: white; /* Цвет текста */
+    background-color: #5d5d5d; /* Цвет фона */
+    border: 2px solid gray; /* Рамка */
+    padding: 10px; /* Отступы внутри поля */
+    font-size: 28px; /* Размер шрифта */
+    border-radius: 10px;
+    width: 100%;
+}
+
+input[type="text"]:focus, , input[type="password"]:focus, input[type="email"]:focus {
+    border-color: white; /* Цвет рамки при фокусе */
+    background-color: #5d5d5d; /* Цвет фона при фокусе */
+
+}
+
+.content-block {
+    flex-direction: block;
+    justify-content: center;
+    margin: 50px 10% 0px 10%; /* top right bottom left */
+    padding: 10px 10px 0px 10px; /* top right bottom left */
+    border: solid;
+    border-radius: 10px;
+    position: relative; /* Для absolute positioning */
+    min-height: 300PX; /* Задайте нужную высоту */
+    font-size: 36px;
+    background-color: #5d5d5d;
+}
+
+button {
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+
+.text-block {
+    color: white;
+    flex-grow: 1;
+    margin-left: 20px;
+    width: 500px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.profile-img {
+    width: 150px;  /* Размер изображения профиля */
+    height: 150px;
+    border: 2px solid #000;
+}
+
+.text-auth {
+    justify-content: center;
+}
+
+a, label {
+    text-decoration: none;  /* Убирает подчеркивание */
+    color: white;         /* Убирает изменение цвета, если оно задано для ссылок */
+}
+
+.nav-pills .nav-item {
+    position: relative;
+}
+
+/* Изменение шрифта в редакторе */
+.ql-editor {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+}
+
+.ql-editor h1, .ql-editor h2 {
+    color: white;
+}
+.ql-toolbar.ql-snow, .ql-editor ql-blank  {
+    border-radius: 10px;
+    background-color: white;
+}
+/* Изменение цвета текста */
+p {
+    color: white;
+}
+
+select {
+    border-radius: 10px;
+}
+
+/* Устанавливаем шрифт для Quill */
+.ql-editor {
+    font-family: 'Roboto', sans-serif; /* это основной шрифт редактора */
+}
+
+/* Применяем шрифты для кнопок в панели инструментов */
+.ql-font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ql-font-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ql-font-arial {
+    font-family: 'Arial', sans-serif;
+}
+
+.ql-font-times-new-roman {
+    font-family: 'Times New Roman', serif;
+}
+
+.ql-font-courier {
+    font-family: 'Courier', monospace;
+}
+
+.ql-font-georgia {
+    font-family: 'Georgia', serif;
+}
+
+.ql-font-verdana {
+    font-family: 'Verdana', sans-serif;
+}
+
+.ql-font-tahoma {
+    font-family: 'Tahoma', sans-serif;
+}
+
+.ql-font-comic-sans-ms {
+    font-family: 'Comic Sans MS', sans-serif;
+}

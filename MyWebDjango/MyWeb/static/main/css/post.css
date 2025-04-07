@@ -1,0 +1,97 @@
+body {
+    font-family: 'comic sans ms', cursive;
+    background-color: #151515;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black !important;
+    background-color: #ffffff;
+}
+.nav-link{
+    color: white !important;
+}
+
+.content-block {  
+    justify-content: center;
+    margin: 50px 10% 0px 10%; /* top right bottom left */
+    padding: 10px 10px 0px 10px; /* top right bottom left */
+    border: solid;
+    border-radius: 10px;
+    position: relative; /* Для absolute positioning */
+    min-height: 300PX; /* Задайте нужную высоту */
+    font-size: 18px;
+    background-color: #5d5d5d;
+}
+
+.text-block {
+    color: white;
+    flex-grow: 1;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.img-block {
+    width: 200px;  /* Фиксированная ширина для изображения */
+    height: 200px; /* Фиксированная высота для изображения */
+    border: 2px solid #000000;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20px;
+}
+
+.last-block {
+    position: absolute;
+    bottom: 0; /* Размещает элемент внизу */
+    width: 100%;
+    border-top: solid;
+    flex-grow: 1;
+    font-size: 20px;
+    display: flex; /* Устанавливаем Flexbox */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    padding: 5px 5px 0 5px; /* Добавим немного отступа, если нужно */
+}
+
+/* Стили для кнопок */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+button:hover {
+    transform: scale(1.05); /* Увеличиваем размер кнопки при наведении */
+}
+
+.update-button {
+    background-color: #ffffff; /* Зеленый */
+    color: black;
+}
+
+.update-button:hover {
+    background-color: #fffefc; /* Темнее зеленый при наведении */
+}
+
+.delete-button {
+    background-color: black; /* Красный */
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #1a1918; /* Темнее красный при наведении */
+}
+
+/* Стили для контейнера с кнопками */
+.last-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+}

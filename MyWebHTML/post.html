@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="post.css">
+    <title>С</title>
+</head>
+<body>
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" aria-current="page">Feed</a>
+            </li>
+            <li class="nav-item">
+                <a href="mypage.html" class="nav-link {% if request.resolver_match.url_name == 'mypage' %}active{% endif %}">MyPage</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="main-blocks">
+        
+        <div class="content-block">
+            <img class="img-block" src="roma.jpg" alt="Image">
+            <div class="text-block">
+                <h1>Title</h1>
+                <p class="text-block">Ровно 1000 знаков будет в этом абзаце. <br>
+                        В действительности 1000 знаков – это в одном случае более чем достаточно, в другом – слишком мало, в третьем – даже слишком много. Согласитесь, заголовок длиной в 15 предложений выглядел бы странно. А рассказ с предысторией, интригой и развязкой в тысячу знаков уложить сможет только очень талантливый писатель. В среднем тысяча знаков – это хорошее развернутое описание товара в каталоге. В такой объем уместится и подробная характеристика, и область применения, и особенности данной модели, и даже на призывающий рекламный абзац место останется. Если оценивать на глаз, то текст в 1000 знаков (без пробелов) – это примерно половина страницы А4 шрифтом Times NewRoman размером 12 пт с полуторным интервалом. Если вам ничего не говорят эти параметры, то просто поверьте на слово: это примерно полстраницы привычного вам текста. Теперь следующий вопрос: когда 1000 символов мало? Если для описания товара 700-1000 знаков вполне достаточно, то текст на страницу сайта нужно писать побольше объемом. Объем в 2000-3000 знаков – это добротная статья, достаточная для раскрытия темы. Минимальный рекомендуемый объем статьи – около 1500 знаков.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

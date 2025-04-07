@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'main/css/addpage.css' %}">
+{% endblock %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+<div class="main-blocks">
+    <div class="content-block">
+        <p>Вы успешно зарегистрировались! Для входа в систему необходимо авторизоваться.</p>
+        <a href="{% url 'users:login' %}">По ссылке *ТЫК*</a>
+    </div>
+</div>
+{% endblock %}

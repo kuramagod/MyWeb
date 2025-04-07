@@ -1,0 +1,89 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'main/css/profile.css' %}">
+{% endblock %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+{% block content %}
+<div class="main-blocks">
+    <div class="content-block">
+        <p class="text-auth">Профиль</p>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <input type="hidden" name="next" value="{{ next }}"/>
+
+            <div class="form-fields">
+
+                <div class="form-group">
+                    <label class="form-label">Аватарка:</label>
+                    <div class="profile-photo">
+                        {% if user.photo %}
+                        <img id="profile-img" class="profile-img" src="{{ user.photo.url }}" onclick="document.getElementById('photo-input').click()">
+
+                        {% else %}
+                        <img id="profile-img" class="profile-img" src="{{ default_image }}" onclick="document.getElementById('photo-input').click()">
+
+                        {% endif %}
+                        <input type="file" name="photo" id="photo-input" class="file-input" accept="image/*" onchange="previewImage(event)">
+
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Логин:</label>
+                    <p>{{ user.username }}</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">E-mail:</label>
+                    <p>{{ user.email }}</p>
+                </div>
+
+            </div>
+
+                {% for f in form %}
+                    {% if f.name != 'username' and f.name != 'email' and f.name != 'photo'%}
+                    <div class="form-group">
+                        <label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>
+                        {{ f }}
+                        <div class="form-error">{{ f.errors }}</div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn-save">Сохранить</button>
+        </form>
+
+        <form method="post" action="{% url 'users:logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn-logout">Выйти</button>
+        </form>
+
+        <a href="{% url 'users:password_change' %}" class="link">Сменить пароль</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('profile-img');
+            output.style.opacity = 0;
+            setTimeout(function() {
+                output.src = reader.result;
+                output.style.opacity = 1;
+            }, 300);
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+{% endblock %}

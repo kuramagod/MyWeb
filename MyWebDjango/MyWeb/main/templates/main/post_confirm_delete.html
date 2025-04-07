@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'main/css/profile.css' %}">
+{% endblock %}
+
+{% block title %}
+DeletePage
+{% endblock %}
+
+{% block content %}
+<div class="main-blocks">
+    <div class="content-block">
+        <form method="post">{% csrf_token %}
+            <p>Удалить "{{ object }}"? (*μ_μ)</p>
+            {{ form }}
+            <input type="submit" value="Confirm">
+        </form>
+    </div>
+</div>
+{% endblock %}

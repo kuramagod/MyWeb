@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'main/css/addpage.css' %}">
+{% endblock %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+<div class="main-blocks">
+    <div class="content-block">
+        <p class="text-auth">Авторизация</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+            {{ form.as_p }}
+            <p><button type="submit">Войти</button></p>
+        </form>
+        <a href="{% url 'users:password_reset' %}">Забыли пароль?</a>
+    </div>
+</div>
+{% endblock %}

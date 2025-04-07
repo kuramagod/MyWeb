@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'main/css/addpage.css' %}">
+{% endblock %}
+
+{% block title %}
+Error
+{% endblock %}
+
+
+{% block content %}
+<div class="main-blocks">
+    <div class="content-block">
+        <p class="text-auth"> (‡▼益▼) Нельзя редактировать чужой профиль (‡▼益▼)</p>
+        <a href="{% url 'mypage' user.username %}">* Ладно, не буду *</a>
+    </div>
+</div>
+{% endblock %}

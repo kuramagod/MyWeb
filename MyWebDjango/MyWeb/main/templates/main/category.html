@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+    {% load static %}
+<link rel="stylesheet" href="{% static 'main/css/category.css' %}">
+{% endblock %}
+
+{% block title %}
+Categories
+{% endblock %}
+
+
+{% block content %}
+<div class="main-blocks">
+    {% for category in categories %}
+        <div class="content-block">
+            <a href="{{ category.get_absolute_url }}"><h1 class="title">{{ category.name }}</h1></a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/post.css' %}">
+{% endblock %}
+
+{% block title %}
+Post
+{% endblock %}
+
+
+{% block content %}
+<div class="main-blocks">
+    <div class="content-block">
+        {% if post.main_picture %}
+            <img class="img-block" src="{{ post.main_picture.url }}">
+        {% endif %}
+        <div class="text-block">
+            <h1>{{ post.title }}</h1>
+            <p class="text-block">{{ post.content|safe }}</p>
+            {% if post.author == request.user %}
+            <a href="{% url 'update_post' post.slug %}">
+                    <button class="update-button">Редактировать</button>
+                </a>
+            <a href="{% url 'delete_post' post.slug %}">
+                    <button class="delete-button">Удалить</button>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
