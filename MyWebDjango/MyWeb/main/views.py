@@ -98,6 +98,7 @@ class DeletePost(DeleteView):
 
 
 def user_account_page(request):
+    s = 1
     return render(request, 'main/userpage.html')
 
 
